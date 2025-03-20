@@ -10,10 +10,8 @@ end
 
 local appBinds = {
   { prefix = { 'alt' }, key = "space", appName = "Ghostty" },
-  { prefix = { 'alt' }, key = "v", appName = "Visual Studio Code" },
   { prefix = { 'alt' }, key = "s", appName = "Slack" },
   { prefix = { 'alt' }, key = "t", appName = "Clock" },
-  { prefix = { 'alt' }, key = "a", appName = "Arc.app" },
   { prefix = { 'alt' }, key = "d", appName = "Docker Desktop" },
 }
 
