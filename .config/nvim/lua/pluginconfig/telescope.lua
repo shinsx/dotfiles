@@ -16,8 +16,8 @@ require("telescope").setup({
 		vimgrep_arguments = vimgrep_arguments,
 		mappings = {
 			i = {
-				["<C-v>"] = actions.select_horizontal,
-				["<C-s>"] = actions.select_vertical,
+				["<C-s>"] = actions.select_horizontal,
+				["<C-v>"] = actions.select_vertical,
 			},
 		},
 	},
@@ -40,3 +40,4 @@ require("telescope").load_extension("fzf")
 local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<C-p>", builtin.find_files, { desc = "Find files by Telescope" })
 vim.keymap.set("n", "<C-h>", builtin.live_grep, { desc = "Grep files by Telescope" })
+vim.keymap.set("n", "<C-g>", builtin.git_status, { desc = "git status by Telescope" })
