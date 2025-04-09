@@ -26,3 +26,10 @@ vim.opt.swapfile = false
 vim.opt.updatetime = 200 -- CursorHold イベントが早く発生し、プラグインの応答性が向上
 vim.opt.autoread = true -- ファイルが変更されたら自動で読み込む
 vim.opt.autoindent = true -- インデントを自動で行う
+
+-- Linterの表示
+vim.diagnostic.config({
+  virtual_text = true,
+  signs = true,
+  underline = true,
+})
