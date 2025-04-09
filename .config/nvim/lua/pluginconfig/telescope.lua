@@ -16,8 +16,8 @@ require("telescope").setup({
 		vimgrep_arguments = vimgrep_arguments,
 		mappings = {
 			i = {
-				["<C-s>"] = actions.select_horizontal,
-				["<C-v>"] = actions.select_vertical,
+				["<C-v>"] = actions.select_horizontal,
+				["<C-s>"] = actions.select_vertical,
 			},
 		},
 	},
