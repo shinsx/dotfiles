@@ -308,11 +308,32 @@ return {
 		-- スクロールバー
 		"petertriho/nvim-scrollbar",
 		event = "VimEnter",
-		-- dependencies = { { "kevinhwang91/nvim-hlslens" } },
+    dependencies = {
+      "lewis6991/gitsigns.nvim",
+      "kevinhwang91/nvim-hlslens",   -- ← 検索ハイライトも使うなら
+    },
 		config = function()
 			require("pluginconfig/scrollbar")
 		end,
 	},
+  {
+    -- git blame, nvim-scrollbarと連携して差分表示
+    "lewis6991/gitsigns.nvim",
+    config = function()
+      require('pluginconfig/gitsigns')
+      require("scrollbar.handlers.gitsigns").setup()
+    end
+  },
+  {
+    "kevinhwang91/nvim-hlslens",
+    config = function()
+      require("hlslens").setup({
+        build_position_cb = function(plist, _, _, _)
+          require("scrollbar.handlers.search").handler.show(plist.start_pos)
+        end,
+      })
+    end
+  },
 	{
 		"sindrets/diffview.nvim",
 		event = "BufReadPre",
@@ -348,11 +369,6 @@ return {
 		config = function()
 			require("pluginconfig/toggleterm")
 		end,
-	},
-	{
-		-- VSCodeのGitLens
-		"APZelos/blamer.nvim",
-		event = "VimEnter",
 	},
 	-- {
 	--   'vim-denops/denops.vim',
