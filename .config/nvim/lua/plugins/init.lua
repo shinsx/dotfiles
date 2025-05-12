@@ -149,13 +149,21 @@ return {
 			require("mason").setup()
 		end,
 	},
-	-- {
-	--   'williamboman/mason-lspconfig',
-	--   after = 'mason.nvim',
-	--   config = function()
-	--     require("pluginconfig/mason-lspconfig")
-	--   end,
-	-- },
+	{
+	  'williamboman/mason-lspconfig',
+    dependencies = {
+      "williamboman/mason.nvim",
+      "neovim/nvim-lspconfig",
+      "folke/lazydev.nvim",
+      "folke/neoconf.nvim",
+      "b0o/schemastore.nvim",
+      "hrsh7th/nvim-cmp",
+    },
+    event = { "BufReadPre", "BufNewFile" },
+	  config = function()
+	    require("pluginconfig/mason-lspconfig")
+	  end,
+	},
 	-- {
 	--   'neovim/nvim-lspconfig',
 	--   event = { "BufReadPre", "BufNewFile" },

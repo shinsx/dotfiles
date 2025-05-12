@@ -1,35 +1,42 @@
+require("mason").setup()
+
 local mason_lspconfig = require("mason-lspconfig")
 
 -- mason-lspconfigの設定
+-- mason_lspconfig.setup({})
 mason_lspconfig.setup({
-  ensure_installed = { "tsserver", "lua_ls", "rust_analyzer", "eslint" }, -- インストールするLSPサーバー
+  ensure_installed = {
+    "lua_ls",
+    "rust_analyzer",
+    "eslint",
+  },
 })
 
 -- 各LSPサーバーの設定
-local lspconfig = require("lspconfig")
-
--- -- TypeScriptのLSPサーバー設定
-lspconfig.tsserver.setup{}
-
-lspconfig.eslint.setup{
-  settings = {
-    ['eslint'] = {
-      diagnostics = {
-        enable = false;
-      }
-    }
-  }
-}
+-- local lspconfig = require("lspconfig")
 --
--- -- LuaのLSPサーバー設定
--- lspconfig.lua_ls.setup{}
+-- -- -- TypeScriptのLSPサーバー設定
+-- lspconfig.tsserver.setup{}
 --
-lspconfig.rust_analyzer.setup{
-  settings = {
-    ['rust-analyzer'] = {
-      diagnostics = {
-        enable = false;
-      }
-    }
-  }
-}
+-- lspconfig.eslint.setup{
+--   settings = {
+--     ['eslint'] = {
+--       diagnostics = {
+--         enable = false;
+--       }
+--     }
+--   }
+-- }
+-- --
+-- -- -- LuaのLSPサーバー設定
+-- -- lspconfig.lua_ls.setup{}
+-- --
+-- lspconfig.rust_analyzer.setup{
+--   settings = {
+--     ['rust-analyzer'] = {
+--       diagnostics = {
+--         enable = false;
+--       }
+--     }
+--   }
+-- }
