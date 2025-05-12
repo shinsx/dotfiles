@@ -3,6 +3,7 @@
 
 !/Brewfile
 !/.zshrc
+!/.vimrc
 !/linklist.txt
 !/setup.sh
 
