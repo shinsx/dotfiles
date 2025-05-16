@@ -171,16 +171,6 @@ return {
 	--     require("pluginconfig/nvim-lspconfig")
 	--   end,
 	-- },
-	{
-		"slim-template/vim-slim",
-		event = "FileType",
-		ft = { "slim" },
-	},
-	{
-		"tpope/vim-haml",
-		event = "FileType",
-		filetypes = { "haml" },
-	},
 	-- ==============コード補完==============
 	{
 		"hrsh7th/nvim-cmp",
