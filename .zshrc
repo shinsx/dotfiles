@@ -1,5 +1,3 @@
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 
@@ -104,6 +102,13 @@ fpath=(~/.zsh/completion $fpath)
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
+
+# mysqlのpath
+export PATH="/opt/homebrew/opt/mysql@8.0/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/mysql@8.0/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/mysql@8.0/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/mysql@8.0/lib/pkgconfig"
+
 # git
 autoload -Uz vcs_info
 setopt prompt_subst
@@ -139,12 +144,6 @@ eval "$(pyenv init -)"
 # nodeのpath
 # export PATH="$HOME/.nodebrew/current/bin:$PATH"
 
-# mysqlのpath
-export PATH="/opt/homebrew/opt/mysql@8.0/bin:$PATH"
-export LDFLAGS="-L/opt/homebrew/opt/mysql@8.0/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/mysql@8.0/include"
-export PKG_CONFIG_PATH="/opt/homebrew/opt/mysql@8.0/lib/pkgconfig"
-
 # その他path
 export PATH="/opt/homebrew/opt/imagemagick@6/bin:$PATH"
 
@@ -161,6 +160,7 @@ alias gae="git commit --allow-empty -m"
 alias game="git commit --amend --no-edit"
 alias dc="docker compose"
 alias du="docker compose down && docker compose up"
+alias tidy="go mod tidy"
 
 # プロジェクトのエイリアス
 alias bot="cd ~/workspace/myope/myope-bot"
