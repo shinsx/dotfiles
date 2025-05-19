@@ -9,6 +9,10 @@ vim.opt.smartindent = true
 vim.opt.autoread = true
 vim.opt.termguicolors = true
 
+-- 画面分割時に新しいウィンドウを右側と下側に作成
+vim.opt.splitright = true
+vim.opt.splitbelow = true
+
 ---indent-blankline
 vim.opt.list = true
 vim.opt.listchars:append "space:⋅"
