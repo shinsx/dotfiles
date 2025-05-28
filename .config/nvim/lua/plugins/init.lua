@@ -386,6 +386,14 @@ return {
         desc = "Buffer Local Keymaps (which-key)",
       },
     },
+  },
+  {
+		-- チートシート表示
+    "sirasagi62/toggle-cheatsheet.nvim",
+    event = "VeryLazy",
+		config = function()
+			require("pluginconfig/toggle-cheatsheet")
+		end,
   }
 }
 -- opt = trueをつければsetupだけの設定ファイルを削除する
