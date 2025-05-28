@@ -1,1 +1,1 @@
-test -x ~/.local/bin/fig; and eval (~/.local/bin/fig init fish pre --rcfile 00_fig_pre | string split0)
+test -x ~/.local/bin/q; and eval (~/.local/bin/q init fish pre --rcfile 00_fig_pre | string split0)
