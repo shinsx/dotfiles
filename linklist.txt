@@ -1,8 +1,8 @@
-ln -s dotfiles/.config/tmux/.tmux.conf ~/.tmux.conf
-ln -s dotfiles/.config/alacritty/alacritty.yml ~/alacritty.yml
 ln -s dotfiles/.config ~/.config
 ln -s dotfiles/.zshrc ~/.zshrc
 ln -s dotfiles/.gitconfig ~/.gitconfig
 ln -s dotfiles/.zsh ~/.zsh
 ln -s dotfiles/.config/hammerspoon ~/.hammerspoon
+
+rm ~/Library/Application\ Support/com.mitchellh.ghostty/config
 ln -s dotfiles/.config/ghostty/config ~/Library/Application\ Support/com.mitchellh.ghostty/config
