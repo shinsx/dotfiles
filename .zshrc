@@ -73,7 +73,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git autojump web-search fzf zsh-syntax-highlighting zsh-autosuggestions docker docker-compose)
+plugins=(git autojump web-search fzf docker docker-compose)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -132,14 +132,19 @@ export HISTSIZE=100000
 export SAVEHIST=100000
 
 export PATH="/usr/local/bin/aws:$PATH"
+export PATH="~/.local/bin/mise:$PATH"
 
 # rubyのpath
-eval "$(rbenv init -)"
+if command -v rbenv >/dev/null 2>&1; then
+  eval "$(rbenv init -)"
+fi
 
 # pythonのpath
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+if command -v pyenv >/dev/null 2>&1; then
+  export PYENV_ROOT="$HOME/.pyenv"
+  export PATH="$PYENV_ROOT/bin:$PATH"
+  eval "$(pyenv init -)"
+fi
 
 # nodeのpath
 # export PATH="$HOME/.nodebrew/current/bin:$PATH"
@@ -174,3 +179,22 @@ setopt pushd_ignore_dups # popdの重複削除
 setopt auto_cd # cd無しで移動できる
 setopt hist_ignore_dups # historyの重複削除
 setopt share_history # 他のzshで履歴(history)を共有
+
+# Go
+# export PATH="$(go env GOPATH)/bin:$PATH"
+# mise
+eval "$(mise activate zsh)"
+# aqua
+export PATH="$(aqua root-dir)/bin:$PATH"
+
+export CGO_CFLAGS="-DHAVE_STRCHRNUL -mmacosx-version-min=15.4" 
+export MACOSX_DEPLOYMENT_TARGET=15.4
+
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+alias hr="cd ~/workspace/hrbrain"
+alias ocicat-a="cd ~/workspace/hrbrain/apps/ocicat/app"
+alias ocicat-f="cd ~/workspace/hrbrain/apps/ocicat/front"
+alias svup="tilt up ocicat siberian"
+alias td="tilt down"
