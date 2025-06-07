@@ -54,10 +54,6 @@ brew "krb5"
 brew "lazygit"
 # Asynchronous event library
 brew "libevent"
-# Yet another part-of-speech and morphological analyzer
-brew "mecab"
-# IPA dictionary compiled for MeCab
-brew "mecab-ipadic"
 # General-purpose lossless data-compression library
 brew "zlib"
 # Open source relational database management system
@@ -92,8 +88,6 @@ brew "ripgrep-all"
 brew "ruby"
 # Terminal multiplexer with VT100/ANSI terminal emulation
 brew "screen"
-# Terminal multiplexer
-brew "tmux"
 # Vi 'workalike' with many additional features
 brew "vim"
 # Terraform

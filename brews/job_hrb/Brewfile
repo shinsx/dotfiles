@@ -75,8 +75,6 @@ brew "ripgrep"
 brew "ripgrep-all"
 # Terminal multiplexer with VT100/ANSI terminal emulation
 brew "screen"
-# Terminal multiplexer
-brew "tmux"
 # Vi 'workalike' with many additional features
 brew "vim"
 # Terraform
