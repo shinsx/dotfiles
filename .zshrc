@@ -183,9 +183,13 @@ setopt share_history # 他のzshで履歴(history)を共有
 # Go
 # export PATH="$(go env GOPATH)/bin:$PATH"
 # mise
-eval "$(mise activate zsh)"
+if command -v mise >/dev/null 2>&1; then
+  eval "$(mise activate zsh)"
+fi
 # aqua
-export PATH="$(aqua root-dir)/bin:$PATH"
+if command -v aqua >/dev/null 2>&1; then
+  export PATH="$(aqua root-dir)/bin:$PATH"
+fi
 
 export CGO_CFLAGS="-DHAVE_STRCHRNUL -mmacosx-version-min=15.4" 
 export MACOSX_DEPLOYMENT_TARGET=15.4
