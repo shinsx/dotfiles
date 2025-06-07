@@ -7,6 +7,9 @@ local cs1 = tcs.createCheatSheetFromSubmodeKeymap(
     {"Ctrl + i","カーソル位置 進む"},
     {"Ctrl + j","zellij Scroll"},
     {"e","zellij Scrollから編集モード"},
+    {"gd","定義ジャンプ"},
+    {"gh","型チェック"},
+    {"go","linterのフロート"},
   }
 )
 
