@@ -10,6 +10,7 @@ local cs1 = tcs.createCheatSheetFromSubmodeKeymap(
     {"gd","定義ジャンプ"},
     {"gh","型チェック"},
     {"go","linterのフロート"},
+    {"ga","自動import"},
   }
 )
 
