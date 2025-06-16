@@ -198,7 +198,6 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 alias hr="cd ~/workspace/hrbrain"
-alias ocicat-a="cd ~/workspace/hrbrain/apps/ocicat/app"
-alias ocicat-f="cd ~/workspace/hrbrain/apps/ocicat/front"
-alias svup="tilt up ocicat siberian"
+alias ocicat="cd ~/workspace/hrbrain/apps/ocicat"
+alias siberian="cd ~/workspace/hrbrain/apps/siberian"
 alias td="tilt down"
