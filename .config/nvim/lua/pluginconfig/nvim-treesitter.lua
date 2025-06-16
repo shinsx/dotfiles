@@ -15,6 +15,8 @@ require("nvim-treesitter.configs").setup({
     "python",
     "rust",
     "go",
+    "gosum",
+    "gomod",
     "bash",
     "dockerfile",
     "gitignore",
