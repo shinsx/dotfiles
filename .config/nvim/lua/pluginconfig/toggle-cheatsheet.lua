@@ -11,17 +11,15 @@ local cs1 = tcs.createCheatSheetFromSubmodeKeymap(
     {"gh","型チェック"},
     {"go","linterのフロート"},
     {"ga","自動import"},
+    {"Space + i","呼び出し元検索 Telescope"},
   }
 )
 
 -- define another cheat sheet
 -- local cs2 = tcs.createCheatSheetFromSubmodeKeymap(
 --   tcs.conf{
---     {"Ctrl + f", "Scroll forward one full screen."},
---     {"Ctrl + b", "Scroll backward one full screen."},
---     {"Ctrl + d", "Scroll down half a screen."},
---     {"Ctrl + u", "Scroll up half a screen."},
---     {"Ctrl + g", "Show the current file name and line number."}
+--     {"メモ"},
+--     {"メモa"}
 --   }
 -- )
 
