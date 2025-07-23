@@ -12,7 +12,6 @@ local appBinds = {
   { prefix = { 'alt' }, key = "space", appName = "Ghostty" },
   { prefix = { 'alt' }, key = "s", appName = "Slack" },
   { prefix = { 'alt' }, key = "t", appName = "Clock" },
-  { prefix = { 'alt' }, key = "d", appName = "Docker Desktop" },
 }
 
 for _, appBind in ipairs(appBinds) do
