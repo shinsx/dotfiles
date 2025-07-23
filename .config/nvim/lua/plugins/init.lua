@@ -342,7 +342,7 @@ return {
 		opts = { hg_cmd = { "" } },
 	},
 	{
-		-- アノーテーションのデザイン
+		-- anotationのデザイン
 		"folke/todo-comments.nvim",
 		event = "VimEnter",
 		dependencies = { "nvim-lua/plenary.nvim" },
