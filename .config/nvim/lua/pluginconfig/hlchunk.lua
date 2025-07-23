@@ -1,7 +1,7 @@
 local default_conf = {
   priority = 10,
   style = { vim.api.nvim_get_hl(0, { name = "Whitespace" }) },
-  use_treesitter = false,
+  use_treesitter = true,
   chars = { "│" },
   ahead_lines = 5,
   delay = 100,
