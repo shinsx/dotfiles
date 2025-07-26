@@ -5,13 +5,13 @@ local cs1 = tcs.createCheatSheetFromSubmodeKeymap(
   tcs.conf{
     {"Ctrl + o","カーソル位置 戻る"},
     {"Ctrl + i","カーソル位置 進む"},
+    {"行数 + G","指定した行数に変更"},
     {"Ctrl + j","zellij Scroll"},
     {"e","zellij Scrollから編集モード"},
     {"gd","定義ジャンプ"},
     {"gh","型チェック"},
     {"go","linterのフロート"},
     {"ga","自動import"},
-    {"diなんとか","diの後に(or'とかで上下位置さえあってれば消せる"},
     {"Space + i","呼び出し元検索 Telescope"},
   }
 )
