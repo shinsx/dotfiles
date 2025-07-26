@@ -11,6 +11,7 @@ local cs1 = tcs.createCheatSheetFromSubmodeKeymap(
     {"gh","型チェック"},
     {"go","linterのフロート"},
     {"ga","自動import"},
+    {"diなんとか","diの後に(or'とかで上下位置さえあってれば消せる"},
     {"Space + i","呼び出し元検索 Telescope"},
   }
 )
