@@ -1,6 +1,6 @@
 -- NOTE: https://github.com/jay-babu/mason-null-ls.nvim/blob/main/lua/mason-null-ls/mappings/filetype.lua
 require('mason-null-ls').setup({
-  ensure_installed = { 'golangci_lint', 'gofmt', 'gopls' },
+  ensure_installed = { 'golangci_lint', 'gofmt', 'gopls', 'tsp-server' },
 })
 
 local status, null_ls = pcall(require, 'null-ls')
