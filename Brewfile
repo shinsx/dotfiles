@@ -7,12 +7,10 @@ tap "homebrew/cask"
 
 # デスクトップアプリケーションの管理
 cask "visual-studio-code"
-cask "google-chrome"
 cask "docker"
 cask "postman"
 cask "alfred" #ランチャーアプリ
 cask "drawio" #ダイアグラム作成アプリ
-cask "alacritty" #ターミナルアプリ
 cask "deepl"
 cask "figma"
 cask "docker"
@@ -22,7 +20,6 @@ cask "google-japanese-ime"
 cask "karabiner-elements"
 
 # CLIアプリケーションの管理
-brew "yarn"
 brew "git"
 brew "lazygit"
 
