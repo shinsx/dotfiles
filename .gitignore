@@ -16,6 +16,8 @@
 !/.config/wezterm/**
 !/.config/hammerspoon
 !/.config/hammerspoon/**
+!/.config/sheldon
+!/.config/sheldon/**
 /.config/fish/fish_variables
 /.config/fish/secrets.fish
 !/.config/git

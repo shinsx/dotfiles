@@ -1,0 +1,40 @@
+shell = "zsh"
+
+[templates]
+defer = "{{ hooks | get: \"pre\" | nl }}{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}{{ hooks | get: \"post\" | nl }}"
+
+[plugins.zsh-defer]
+github = "romkatv/zsh-defer"
+
+# 1. Oh My Zshの基本ライブラリ（遅延読み込み）
+[plugins.omz-lib]
+github = "ohmyzsh/ohmyzsh"
+dir = "lib"
+apply = ["defer"]
+
+# 2. 既存のプラグインをSheldon管理へ
+[plugins.git]
+github = "ohmyzsh/ohmyzsh"
+dir = "plugins/git"
+apply = ["defer"]
+
+[plugins.docker]
+github = "ohmyzsh/ohmyzsh"
+dir = "plugins/docker"
+apply = ["defer"]
+
+# 3. 提示された高速プラグイン・Zeno
+[plugins.zsh-autosuggestions]
+github = "zsh-users/zsh-autosuggestions"
+apply = ["defer"]
+
+[plugins.zsh-completions]
+github = "zsh-users/zsh-completions"
+
+[plugins.zeno]
+github = "yuki-yano/zeno.zsh"
+branch = "feature/sqlite-history-subsystem"
+
+[plugins.fast-syntax-highlighting]
+github = "zdharma-continuum/fast-syntax-highlighting"
+apply = ["defer"]
