@@ -16,6 +16,8 @@
 !/.config/wezterm/**
 !/.config/hammerspoon
 !/.config/hammerspoon/**
+!/.config/mise
+!/.config/mise/**
 !/.config/sheldon
 !/.config/sheldon/**
 /.config/fish/fish_variables

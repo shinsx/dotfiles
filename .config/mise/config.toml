@@ -1,0 +1,3 @@
+[tools]
+go = "latest"
+"go:github.com/air-verse/air" = "latest"
