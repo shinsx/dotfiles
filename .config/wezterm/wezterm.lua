@@ -42,6 +42,7 @@ config.colors = {
     inactive_tab_edge = "none",
   },
 }
+config.color_scheme = "Solarized Dark Higher Contrast"
 
 -- タブの形をカスタマイズ
 -- タブの左側の装飾

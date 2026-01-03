@@ -266,14 +266,6 @@ return {
       event = "VeryLazy",
    },
    {
-      -- カラーテーマ
-      "folke/tokyonight.nvim",
-      lazy = false,
-      config = function()
-         require("pluginconfig/tokyonight")
-      end,
-   },
-   {
       -- ステータスバーのデザイン
       "nvim-lualine/lualine.nvim",
       event = "InsertEnter",
