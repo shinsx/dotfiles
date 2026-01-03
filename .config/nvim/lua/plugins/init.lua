@@ -266,7 +266,7 @@ return {
       event = "VeryLazy",
    },
    {
-      -- カラースキーム
+      -- カラーテーマ
       "folke/tokyonight.nvim",
       lazy = false,
       config = function()
