@@ -256,8 +256,24 @@ return {
    },
 
    -- ==============Design==============
-   -- ファイル名表示
+   -- {
+   --    -- カラーテーマ
+   --    "folke/tokyonight.nvim",
+   --    lazy = false,
+   --    config = function()
+   --       require("pluginconfig/tokyonight")
+   --    end,
+   -- },
    {
+      -- カラーテーマ
+      "craftzdog/solarized-osaka.nvim",
+      lazy = false,
+      config = function()
+         require("pluginconfig/solarized-osaka")
+      end,
+   },
+   {
+      -- ファイル名表示
       "b0o/incline.nvim",
       config = function()
          require("pluginconfig/incline")
