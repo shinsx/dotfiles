@@ -1,5 +1,3 @@
-eval "$(sheldon source)"
-
 # ==========================================================
 # 環境変数・パス設定
 # ==========================================================
@@ -187,3 +185,35 @@ fi
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+eval "$(sheldon source)"
+
+# ==========================================================
+# fzf コマンド検索
+# ==========================================================
+function history_search_with_fzf() {
+    local selected_command
+    # historyコマンドの出力を反転させてfzfに渡す
+    selected_command=$(history -n 1 | (tac 2>/dev/null || tail -r) | awk '!a[$0]++' | fzf --height 40% --layout=reverse --border)
+    if [ -n "$selected_command" ]; then
+        BUFFER=$selected_command
+        CURSOR=$#BUFFER
+    fi
+    zle reset-prompt
+}
+zle -N history_search_with_fzf
+
+# 全ての設定が完了した後に、確実に bindkey を適用するための関数
+function _apply_my_keybinds() {
+    bindkey '^r' history_search_with_fzf
+    bindkey '^R' history_search_with_fzf
+}
+
+# sheldon や mise が全て読み込まれた後に実行されるようにする
+# zsh-defer が入っている場合はそれを利用
+if (( $+functions[zsh-defer] )); then
+    zsh-defer _apply_my_keybinds
+else
+    # zsh-defer がない場合は直接実行
+    _apply_my_keybinds
+fi
