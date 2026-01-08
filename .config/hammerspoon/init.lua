@@ -9,7 +9,7 @@ function toggleApp(appName)
 end
 
 local appBinds = {
-  { prefix = { 'alt' }, key = "space", appName = "WezTerm" },
+  { prefix = { 'alt' }, key = "space", appName = "Ghostty" },
   { prefix = { 'alt' }, key = "s", appName = "Slack" },
   { prefix = { 'alt' }, key = "t", appName = "Clock" },
 }
