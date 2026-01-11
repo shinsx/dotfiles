@@ -61,8 +61,8 @@ return {
     { key = "w", mods = "SUPER", action = act({ CloseCurrentTab = { confirm = true } }) },
     { key = "}", mods = "LEADER", action = act({ MoveTabRelative = 1 }) },
 
-    -- 画面フルスクリーン切り替え
-    { key = "Enter", mods = "ALT", action = act.ToggleFullScreen },
+    -- 画面フルスクリーン切り替えを無効化 copilot cliで改行するため
+    -- { key = "Enter", mods = "ALT", action = act.ActivateCopyMode },
 
     -- コピーモード
     -- { key = 'X', mods = 'LEADER', action = act.ActivateKeyTable{ name = 'copy_mode', one_shot =false }, },
