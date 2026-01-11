@@ -55,6 +55,19 @@ keybinds clear-defaults=true {
     bind "w" { SearchToggleOption "Wrap"; }
     bind "o" { SearchToggleOption "WholeWord"; }
   }
+  resize {
+    bind "Ctrl a" { SwitchToMode "Normal"; }
+    bind "h" "Left" { Resize "Increase Left"; }
+    bind "j" "Down" { Resize "Increase Down"; }
+    bind "k" "Up" { Resize "Increase Up"; }
+    bind "l" "Right" { Resize "Increase Right"; }
+    bind "H" { Resize "Decrease Left"; }
+    bind "J" { Resize "Decrease Down"; }
+    bind "K" { Resize "Decrease Up"; }
+    bind "L" { Resize "Decrease Right"; }
+    bind "=" "+" { Resize "Increase"; }
+    bind "-" { Resize "Decrease"; }
+  }
   entersearch {
     bind "Ctrl c" "Esc" { SwitchToMode "Scroll"; }
     bind "Enter" { SwitchToMode "Search"; }
@@ -78,6 +91,9 @@ keybinds clear-defaults=true {
   }
   shared_except "scroll" "locked" {
     bind "Ctrl j" { SwitchToMode "Scroll"; }
+  }
+  shared_except "resize" "locked" {
+    bind "Ctrl a" { SwitchToMode "Resize"; }
   }
 }
 
