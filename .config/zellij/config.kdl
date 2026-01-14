@@ -56,7 +56,7 @@ keybinds clear-defaults=true {
     bind "o" { SearchToggleOption "WholeWord"; }
   }
   resize {
-    bind "Ctrl a" { SwitchToMode "Normal"; }
+    bind "Ctrl [" { SwitchToMode "Normal"; }
     bind "h" "Left" { Resize "Increase Left"; }
     bind "j" "Down" { Resize "Increase Down"; }
     bind "k" "Up" { Resize "Increase Up"; }
@@ -93,7 +93,7 @@ keybinds clear-defaults=true {
     bind "Ctrl j" { SwitchToMode "Scroll"; }
   }
   shared_except "resize" "locked" {
-    bind "Ctrl a" { SwitchToMode "Resize"; }
+    bind "Ctrl v" { SwitchToMode "Resize"; }
   }
 }
 
