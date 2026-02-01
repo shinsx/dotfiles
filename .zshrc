@@ -107,6 +107,11 @@ alias oci="cd ~/workspace/hrbrain/apps/ocicat/app"
 alias sib="cd ~/workspace/hrbrain/apps/siberian/app"
 alias td="tilt down"
 
+## setup-env
+if [ -f ./.zshrc.local ]; then
+    source ./.zshrc.local
+fi
+export TENV_AUTO_INSTALL=true
 
 # ==========================================================
 # Taskfile
@@ -187,6 +192,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 eval "$(sheldon source)"
+eval "$(direnv hook zsh)"
 
 # ==========================================================
 # fzf コマンド検索
