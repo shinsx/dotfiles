@@ -1,6 +1,6 @@
 -- NOTE: https://github.com/jay-babu/mason-null-ls.nvim/blob/main/lua/mason-null-ls/mappings/filetype.lua
 require('mason-null-ls').setup({
-  ensure_installed = { 'golangci_lint', 'gofmt', 'gopls', 'tsp-server' },
+  ensure_installed = { 'golangci_lint', 'gofmt', 'gopls', 'tsp-server', 'terraform_fmt' },
 })
 
 local status, null_ls = pcall(require, 'null-ls')
@@ -19,7 +19,8 @@ null_ls.setup({
     null_ls.builtins.diagnostics.golangci_lint,
     null_ls.builtins.formatting.gofmt,
     -- Dockerfile
-    null_ls.builtins.diagnostics.hadolint
+    null_ls.builtins.diagnostics.hadolint,
+    null_ls.builtins.formatting.terraform_fmt
   },
   debug = false,
 })
