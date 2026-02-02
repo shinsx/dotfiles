@@ -107,9 +107,22 @@ alias oci="cd ~/workspace/hrbrain/apps/ocicat/app"
 alias sib="cd ~/workspace/hrbrain/apps/siberian/app"
 alias td="tilt down"
 
+# terraform
+alias t='terraform'
+alias tf='terraform fmt --recursive'
+alias ti='terraform import'
+alias tin='terraform init'
+alias tss='terraform state show'
+alias tsl='terraform state list'
+alias tsrm='terraform state rm'
+alias tp='terraform plan'
+alias ta='terraform apply'
+alias tsmv='terraform state mv'
+alias tui='tftui'
+
 ## setup-env
-if [ -f ./.zshrc.local ]; then
-    source ./.zshrc.local
+if [ -f ~/dotfiles/.zshrc.local ]; then
+    source ~/dotfiles/.zshrc.local
 fi
 export TENV_AUTO_INSTALL=true
 
