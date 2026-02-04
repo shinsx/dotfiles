@@ -5,7 +5,7 @@ alias pglocal='psql -h localhost -p $POSTGRES_PORT -U $POSTGRES_USER -d $POSTGRE
 
 # NOTE: プロジェクト環境変数 for DB
 # Service
-appdb() {
+db() {
     export POSTGRES_PORT=
     export POSTGRES_USER=
     export POSTGRES_DB=
@@ -15,6 +15,10 @@ appdb() {
     echo "✅ Switched to ExampleService"
 }
 
+aws() {
+    export AWS_ACCOUNT_ID=
+    export AWS_PROFILE=
+}
 
 ## setup-env
 if [ -f ~/dotfiles/.zshrc.env ]; then
