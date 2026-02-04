@@ -39,11 +39,6 @@ if command -v mise >/dev/null 2>&1; then
   eval "$(mise activate zsh)"
 fi
 
-# Aqua
-if command -v aqua >/dev/null 2>&1; then
-  export PATH="$(aqua root-dir)/bin:$PATH"
-fi
-
 export CGO_CFLAGS="-DHAVE_STRCHRNUL -mmacosx-version-min=15.4"
 export MACOSX_DEPLOYMENT_TARGET=15.4
 
@@ -102,10 +97,6 @@ alias bot="cd ~/workspace/myope/myope-bot"
 alias favy="cd ~/workspace/favy"
 alias ote="cd ~/workspace/otetsutabi-next"
 alias sre="cd ~/workspace/sre-study-rails-app"
-alias hr="cd ~/workspace/hrbrain"
-alias oci="cd ~/workspace/hrbrain/apps/ocicat/app"
-alias sib="cd ~/workspace/hrbrain/apps/siberian/app"
-alias td="tilt down"
 
 # terraform
 alias t='terraform'
@@ -130,7 +121,7 @@ export TENV_AUTO_INSTALL=true
 # Taskfile
 # ==========================================================
 #compdef task
-compdef _task task
+# compdef _task task
 typeset -A opt_args
 
 _GO_TASK_COMPLETION_LIST_OPTION="${GO_TASK_COMPLETION_LIST_OPTION:---list-all}"
@@ -205,7 +196,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 eval "$(sheldon source)"
-eval "$(direnv hook zsh)"
+if (( $+commands[direnv] )); then
+  eval "$(direnv hook zsh)"
+fi
 
 # ==========================================================
 # fzf コマンド検索
