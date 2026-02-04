@@ -14,3 +14,9 @@ appdb() {
     export BASTION=
     echo "✅ Switched to ExampleService"
 }
+
+
+## setup-env
+if [ -f ~/dotfiles/.zshrc.env ]; then
+    source ~/dotfiles/.zshrc.env
+fi
