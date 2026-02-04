@@ -1,8 +1,10 @@
-/*
+*
 /.**
 
 !/brews/
 !/.zshrc
+!/.zshrc.local.example
+!/.gitignore_global
 !/.vimrc
 !/linklist.txt
 !/setup.sh
@@ -37,14 +39,7 @@
 !/.config/zellij
 !/.config/zellij/**
 !/.config/zsh
-!/.config/zsh/zshrc
 !/.github
 !/.github/**
 
-!/README.md
 !/LICENSE
-node_modules
-avante.nvim/
-configstore/
-github-copilot/
-.DS_Store
