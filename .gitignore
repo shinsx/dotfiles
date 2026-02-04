@@ -36,8 +36,8 @@
 !/.config/nvim/**
 !/.config/tmux
 !/.config/tmux/**
-!/.config/zellij
-!/.config/zellij/**
+!/.config/zellij/config.kdl.example
+!/.config/zellij/layouts/default.kdl.example
 !/.config/zsh
 !/.github
 !/.github/**
