@@ -104,6 +104,7 @@ plugins {
   compact-bar { path "compact-bar"; }
 }
 
+// TODO: 環境に合わせて修正
 layout_dir "/Users/Miura.Shinji/dotfiles/.config/zellij/layouts"
 theme "tokyo-night"
 
