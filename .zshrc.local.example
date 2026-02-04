@@ -1,0 +1,16 @@
+# NOTE: devDB
+alias pgdev='gcloud compute ssh --tunnel-through-iap --zone "asia-northeast1-a" --project "$PROJECT_DEV" $BASTION'
+# NOTE: ローカルDB
+alias pglocal='psql -h localhost -p $POSTGRES_PORT -U $POSTGRES_USER -d $POSTGRES_DB'
+
+# NOTE: プロジェクト環境変数 for DB
+# Service
+appdb() {
+    export POSTGRES_PORT=
+    export POSTGRES_USER=
+    export POSTGRES_DB=
+    export PGPASSWORD=
+    export PROJECT_DEV=
+    export BASTION=
+    echo "✅ Switched to ExampleService"
+}
