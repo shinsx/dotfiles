@@ -21,4 +21,12 @@ function M.get_file_name()
   return true
 end
 
+-- LSPの再起動とファイルの再読み込みを同時に実行
+function M.restart_lsp_and_reload()
+  vim.cmd('LspRestart')
+  vim.cmd('e!')
+  print("LSP restarted and buffer reloaded")
+  return true
+end
+
 return M

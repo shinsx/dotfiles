@@ -11,9 +11,9 @@ vim.keymap.set("n", "<leader>t", ":tabnew<CR>", { silent = true, desc = 'open ne
 vim.keymap.set("n", "re", "gt", { silent = true })
 vim.keymap.set("n", "er", "gT", { silent = true })
 
- -- 定義ジャンプ
+-- 定義ジャンプ
 vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>')
- -- 型チェック
+-- 型チェック
 vim.keymap.set('n', 'gh', '<cmd>lua vim.lsp.buf.hover()<CR>')
 -- code action 自動import
 vim.keymap.set('n', 'ga', '<cmd>lua vim.lsp.buf.code_action()<CR>')
@@ -23,11 +23,12 @@ vim.keymap.set('n', 'gf', '<cmd>lua vim.lsp.buf.format()<CR>')
 vim.keymap.set('n', 'gl', '<cmd>lua vim.lsp.buf.references()<CR>')
 vim.keymap.set('n', 'gn', '<cmd>lua vim.lsp.buf.rename()<CR>')
 vim.keymap.set(
-  "n", "<leader>fr",
-  "<cmd>lua require('telescope').extensions.frecency.frecency({ workspace = 'CWD' })<cr>",
-  { silent = true, desc = "Find file from history" }
+   "n", "<leader>fr",
+   "<cmd>lua require('telescope').extensions.frecency.frecency({ workspace = 'CWD' })<cr>",
+   { silent = true, desc = "Find file from history" }
 )
 
 local file_path = require('scripts')
 vim.keymap.set('n', '<leader>fp', file_path.get_relative_file_path, { silent = true, noremap = true })
 vim.keymap.set('n', '<leader>fn', file_path.get_file_name, { silent = true, noremap = true })
+vim.keymap.set('n', '<leader>fe', file_path.restart_lsp_and_reload, { silent = true, noremap = true })
