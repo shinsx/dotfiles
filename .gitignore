@@ -42,4 +42,7 @@
 !/.github
 !/.github/**
 
+!/.claude/
+!/.claude/settings.json
+
 !/LICENSE
