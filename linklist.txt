@@ -3,6 +3,7 @@ ln -s dotfiles/.zshrc ~/.zshrc
 ln -s dotfiles/.gitconfig ~/.gitconfig
 ln -s dotfiles/.zsh ~/.zsh
 ln -s dotfiles/.config/hammerspoon ~/.hammerspoon
+ln -s dotfiles/.claude ~/.claude
 
 rm ~/Library/Application\ Support/com.mitchellh.ghostty/config
 ln -s dotfiles/.config/ghostty/config ~/Library/Application\ Support/com.mitchellh.ghostty/config
