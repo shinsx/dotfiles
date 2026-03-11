@@ -84,5 +84,6 @@
       "Write(/etc/sudoers)"
     ],
     "ask": []
-  }
+  },
+  "model": "opus"
 }
