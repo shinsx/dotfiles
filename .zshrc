@@ -110,6 +110,7 @@ alias tp='terraform plan'
 alias ta='terraform apply'
 alias tsmv='terraform state mv'
 alias tui='tftui'
+alias e='ecspresso'
 
 ## setup-env
 if [ -f ~/dotfiles/.zshrc.local ]; then
