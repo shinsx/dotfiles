@@ -106,5 +106,5 @@
     ],
     "ask": []
   },
-  "model": "opus"
+  "voiceEnabled": true
 }
