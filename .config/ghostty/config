@@ -14,3 +14,7 @@ keybind = alt+j=goto_split:down
 keybind = alt+k=goto_split:top
 keybind = cmd+shift+l=new_split:right
 keybind = cmd+shift+j=new_split:down
+keybind = ctrl+shift+h=resize_split:left,10
+keybind = ctrl+shift+l=resize_split:right,10
+keybind = ctrl+shift+j=resize_split:down,10
+keybind = ctrl+shift+k=resize_split:up,10
