@@ -1,6 +1,7 @@
 [user]
   name = miura
   email = shinji65536@gmail.com
+  signingkey = ~/.ssh/id_ed25519.pub
 [rerere]
   enabled = true
 [rebase]
@@ -15,3 +16,9 @@
 	insteadOf = https://github.com/
 [url "git@github.com:hrbrain/hrbx"]
 	insteadof = https://github.com/hrbrain/hrbx
+[gpg]
+ format = ssh
+[gpg "ssh"]
+ allowedSignersFile = ~/.ssh/allowed_signers
+[commit]
+ gpgsign = true
