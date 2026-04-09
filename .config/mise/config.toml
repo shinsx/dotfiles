@@ -1,3 +1,5 @@
 [tools]
 go = "latest"
 "go:github.com/air-verse/air" = "latest"
+"npm:@anthropic-ai/claude-code" = "latest"
+"npm:tree-sitter-cli" = "latest"
