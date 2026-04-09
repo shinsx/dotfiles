@@ -1,108 +1,103 @@
-require("nvim-treesitter.configs").setup({
-  ensure_installed = {
-    "vim",
-    "lua",
-    "javascript",
-    "typescript",
-    "tsx",
-    "json",
-    "yaml",
-    "toml",
-    "html",
-    "css",
-    "scss",
-    "ruby",
-    "python",
-    "rust",
-    "go",
-    "gosum",
-    "gomod",
-    "bash",
-    "dockerfile",
-    "gitignore",
-    "query",
-    "markdown",
-    "markdown_inline",
-    "terraform",
-    "nix",
-    "nginx",
-  },
-  sync_install = false,
-  auto_install = true,
-  highlight = { enable = true },
-  autotag = { enable = true },
-  context_commentstring = {
+-- パーサーのインストール
+require("nvim-treesitter").install({
+  "vim",
+  "lua",
+  "javascript",
+  "typescript",
+  "tsx",
+  "json",
+  "yaml",
+  "toml",
+  "html",
+  "css",
+  "scss",
+  "ruby",
+  "python",
+  "rust",
+  "go",
+  "gomod",
+  "gosum",
+  "gowork",
+  "bash",
+  "dockerfile",
+  "gitignore",
+  "query",
+  "markdown",
+  "markdown_inline",
+  "terraform",
+  "nix",
+  "nginx",
+})
+
+-- FileType ごとにハイライトを有効化
+vim.api.nvim_create_autocmd("FileType", {
+  callback = function()
+    pcall(vim.treesitter.start)
+  end,
+})
+
+-- go.mod / go.sum / go.work のパーサーを明示的にマップ
+vim.treesitter.language.register("gomod", "gomod")
+vim.treesitter.language.register("gosum", "gosum")
+vim.treesitter.language.register("gowork", "gowork")
+
+-- autotag
+require("nvim-ts-autotag").setup()
+
+-- textobjects
+require("nvim-treesitter-textobjects").setup({
+  select = {
     enable = true,
-    enable_autocmd = false,
-  },
-  incremental_selection = {
-    enable = true,
+    lookahead = true,
     keymaps = {
-      init_selection = "gnn",
-      node_incremental = "grn",
-      scope_incremental = "grc",
-      node_decremental = "grm",
+      ["af"] = "@function.outer",
+      ["if"] = "@function.inner",
+      ["ac"] = "@class.outer",
+      ["ic"] = { query = "@class.inner", desc = "Select inner part of a class region" },
     },
+    selection_modes = {
+      ["@parameter.outer"] = "v",
+      ["@function.outer"] = "V",
+      ["@class.outer"] = "<c-v>",
+    },
+    include_surrounding_whitespace = true,
   },
-  textobjects = {
-    select = {
-      enable = true,
-      lookahead = true,
-      keymaps = {
-        ["af"] = "@function.outer",
-        ["if"] = "@function.inner",
-        ["ac"] = "@class.outer",
-        ["ic"] = { query = "@class.inner", desc = "Select inner part of a class region" },
-      },
-      selection_modes = {
-        ['@parameter.outer'] = 'v',
-        ['@function.outer'] = 'V',
-        ['@class.outer'] = '<c-v>',
-      },
-      include_surrounding_whitespace = true,
-    },
-    swap = {
-      enable = true,
-      swap_next = {
-        ["<leader>a"] = "@parameter.inner",
-      },
-      swap_previous = {
-        ["<leader>A"] = "@parameter.inner",
-      },
-    },
-    move = {
-      enable = true,
-      set_jumps = true,
-      goto_next_start = {
-        ["]m"] = "@function.outer",
-        ["]]"] = "@class.outer",
-      },
-      goto_next_end = {
-        ["]M"] = "@function.outer",
-        ["]["] = "@class.outer",
-      },
-      goto_previous_start = {
-        ["[m"] = "@function.outer",
-        ["[["] = "@class.outer",
-      },
-      goto_previous_end = {
-        ["[M"] = "@function.outer",
-        ["[]"] = "@class.outer",
-      },
-    },
-    lsp_interop = {
-      enable = true,
-      border = "none",
-      floating_preview_opts = {},
-      peek_definition_code = {
-        ["<leader>df"] = "@function.outer",
-        ["<leader>dF"] = "@class.outer",
-      },
-    },
-  },
-  rainbow = {
+  swap = {
     enable = true,
-    extended_mode = true,
-    max_file_lines = nil,
+    swap_next = {
+      ["<leader>a"] = "@parameter.inner",
+    },
+    swap_previous = {
+      ["<leader>A"] = "@parameter.inner",
+    },
+  },
+  move = {
+    enable = true,
+    set_jumps = true,
+    goto_next_start = {
+      ["]m"] = "@function.outer",
+      ["]]"] = "@class.outer",
+    },
+    goto_next_end = {
+      ["]M"] = "@function.outer",
+      ["]["] = "@class.outer",
+    },
+    goto_previous_start = {
+      ["[m"] = "@function.outer",
+      ["[["] = "@class.outer",
+    },
+    goto_previous_end = {
+      ["[M"] = "@function.outer",
+      ["[]"] = "@class.outer",
+    },
+  },
+  lsp_interop = {
+    enable = true,
+    border = "none",
+    floating_preview_opts = {},
+    peek_definition_code = {
+      ["<leader>df"] = "@function.outer",
+      ["<leader>dF"] = "@class.outer",
+    },
   },
 })
