@@ -112,6 +112,14 @@ alias tsmv='terraform state mv'
 alias tui='tftui'
 alias e='ecspresso'
 
+# Kubernetes
+alias k='kubectl'
+alias ka='kubectl apply'
+alias kg='kubectl get'
+alias kd='kubectl delete'
+alias kl='kubectl logs -f'
+alias hl='kubectl create token headlamp --duration 24h -n headlamp | pbcopy && echo "✅ トークンをクリップボードにコピーしました" && minikube service headlamp -n headlamp'
+
 ## setup-env
 if [ -f ~/dotfiles/.zshrc.local ]; then
     source ~/dotfiles/.zshrc.local
