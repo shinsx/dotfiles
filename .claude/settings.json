@@ -106,5 +106,14 @@
     ],
     "ask": []
   },
+  "model": "sonnet[1m]",
+  "enabledPlugins": {
+    "gopls-lsp@claude-plugins-official": true
+  },
+  "voice": {
+    "enabled": true,
+    "mode": "hold"
+  },
+  "editorMode": "vim",
   "voiceEnabled": true
 }
