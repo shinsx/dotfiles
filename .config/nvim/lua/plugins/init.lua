@@ -130,13 +130,6 @@ return {
          "saadparwaiz1/cmp_luasnip",
          "uga-rosa/cmp-dictionary",
          "yutkat/cmp-mocword",
-         {
-            "zbirenbaum/copilot-cmp",
-            dependencies = { "copilot.lua" },
-            config = function()
-               require("copilot-cmp").setup()
-            end,
-         },
       },
       config = function()
          require("pluginconfig/nvim-cmp")
@@ -148,21 +141,6 @@ return {
       build = "make install_jsregexp",
    },
    {
-      "zbirenbaum/copilot-cmp",
-      after = { "copilot.lua" },
-      config = function()
-         require("pluginconfig/copilot-cmp")
-      end,
-   },
-   {
-      "zbirenbaum/copilot.lua",
-      cmd = "Copilot",
-      event = "InsertEnter",
-      config = function()
-         require("pluginconfig/copilot")
-      end,
-   },
-   {
       -- 自動閉じ括弧 '"({
       "windwp/nvim-autopairs",
       event = "BufReadPost",
@@ -171,8 +149,7 @@ return {
 
    -- ==============FuzzyFinder==============
    {
-      "nvim-lua/telescope.nvim",
-      branch = "0.1.x",
+      "nvim-telescope/telescope.nvim",
       event = "VimEnter",
       dependencies = {
          { "nvim-lua/plenary.nvim" },
