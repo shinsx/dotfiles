@@ -14,6 +14,9 @@ table.insert(vimgrep_arguments, "!**/.git/*")
 require("telescope").setup({
 	defaults = {
 		vimgrep_arguments = vimgrep_arguments,
+		preview = {
+			treesitter = false,
+		},
 		mappings = {
 			i = {
 				["<C-v>"] = actions.select_horizontal,
