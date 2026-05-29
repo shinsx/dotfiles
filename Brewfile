@@ -22,6 +22,7 @@ cask "karabiner-elements"
 # CLIアプリケーションの管理
 brew "git"
 brew "lazygit"
+brew "tree-sitter" # nvim-treesitter のパーサーコンパイルに必要
 
 # Mac App Storeのアプリケーションを管理
 brew "asdf" #デフォルト
