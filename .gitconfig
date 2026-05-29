@@ -10,6 +10,7 @@
   prune = true
 [core]
   editor = nvim
+  excludesfile = /Users/Miura.Shinji/.gitignore_global
 [pull]
 	rebase = true
 [url "git@github.com:"]
