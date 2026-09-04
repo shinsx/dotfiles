@@ -27,6 +27,8 @@
 !/.config/git
 !/.config/git/config
 !/.config/git/ignore
+!/.config/gh-dash
+!/.config/gh-dash/config.yml
 !/.config/lazygit
 !/.config/lazygit/config.yml
 !/.config/ngrok
