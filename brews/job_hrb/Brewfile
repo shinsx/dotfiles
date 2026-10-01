@@ -68,8 +68,6 @@ brew "openldap"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
 # Object-relational database system
-brew "postgresql@14"
-# Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Wrapper around ripgrep that adds multiple rich file types
 brew "ripgrep-all"

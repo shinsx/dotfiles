@@ -2,18 +2,17 @@
 cask_args appdir: "/Applications"
 
 # 外部ライブラリをインストール
-tap "homebrew/core"
-tap "homebrew/cask"
+# tap "homebrew/core"
+# tap "homebrew/cask"
 
 # デスクトップアプリケーションの管理
 cask "visual-studio-code"
-cask "docker"
+cask "docker-desktop"
 cask "postman"
 cask "alfred" #ランチャーアプリ
 cask "drawio" #ダイアグラム作成アプリ
 cask "deepl"
 cask "figma"
-cask "docker"
 cask "github"
 cask "google-chrome"
 cask "google-japanese-ime"
