@@ -13,10 +13,6 @@
   excludesfile = /Users/Miura.Shinji/.gitignore_global
 [pull]
 	rebase = true
-[url "git@github.com:"]
-	insteadOf = https://github.com/
-[url "git@github.com:hrbrain/hrbx"]
-	insteadof = https://github.com/hrbrain/hrbx
 [gpg]
  format = ssh
 [gpg "ssh"]
