@@ -36,7 +36,7 @@ keybinds clear-defaults=true {
     bind "Ctrl u" { HalfPageScrollUp; }
     bind "Ctrl f" "PageDown" { PageScrollDown; }
     bind "Ctrl b" "PageUp" { PageScrollUp; }
-    bind "e" { EditScrollback; SwitchToMode "Normal"; }
+    bind "e" { EditScrollback { ansi true; }; SwitchToMode "Normal"; }
     bind "Ctrl h" { SwitchToMode "EnterSearch"; SearchInput 0; }
     bind "Ctrl g" { ScrollToBottom; SwitchToMode "Normal"; }
   }
@@ -104,8 +104,7 @@ plugins {
   compact-bar { path "compact-bar"; }
 }
 
-// TODO: 環境に合わせて修正
-layout_dir "/Users/Miura.Shinji/dotfiles/.config/zellij/layouts"
+layout_dir "/Users/miura/dotfiles/.config/zellij/layouts"
 theme "tokyo-night"
 
 // Choose what to do when zellij receives SIGTERM, SIGINT, SIGQUIT or SIGHUP

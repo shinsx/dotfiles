@@ -1,6 +1,11 @@
 # ==========================================================
 # 環境変数・パス設定
 # ==========================================================
+# zellijのEditScrollback(scroll mode -> e)がnvimを使うように
+# (nvimは clipboard=unnamedplus 設定済みなのでyでOSクリップボードにコピーされる)
+export EDITOR="nvim"
+export VISUAL="nvim"
+
 # mysqlのpath
 export PATH="/opt/homebrew/opt/mysql@8.0/bin:$PATH"
 export LDFLAGS="-L/opt/homebrew/opt/mysql@8.0/lib"

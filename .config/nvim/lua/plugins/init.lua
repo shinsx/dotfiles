@@ -317,6 +317,17 @@ return {
       config = function()
          require("pluginconfig/toggle-cheatsheet")
       end,
+   },
+   {
+      -- ANSIエスケープシーケンスを色付けして表示 (zellijのEditScrollback ansi true用)
+      -- NOTE: 最新リリースタグ(v1.4.0)は削除済みのサブモジュールを参照していて壊れているため
+      -- バージョン指定せずデフォルトブランチ(main)のHEADを使う
+      "m00qek/baleia.nvim",
+      cmd = { "BaleiaColorize" },
+      event = { "BufReadPre *.dump", "BufNewFile *.dump" },
+      config = function()
+         require("pluginconfig/baleia")
+      end,
    }
 }
 -- opt = trueをつければsetupだけの設定ファイルを削除する

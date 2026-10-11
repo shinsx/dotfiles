@@ -32,3 +32,6 @@ local file_path = require('scripts')
 vim.keymap.set('n', '<leader>fp', file_path.get_relative_file_path, { silent = true, noremap = true })
 vim.keymap.set('n', '<leader>fn', file_path.get_file_name, { silent = true, noremap = true })
 vim.keymap.set('n', '<leader>fe', file_path.restart_lsp_and_reload, { silent = true, noremap = true })
+
+-- ANSIエスケープシーケンスを色付け(zellijのEditScrollback ansi true用)
+vim.keymap.set('n', '<leader>ac', ':BaleiaColorize<CR>', { silent = true, desc = 'Colorize ANSI escape codes' })
