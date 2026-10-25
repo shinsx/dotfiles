@@ -29,12 +29,8 @@ brew "curl"
 brew "deno"
 # Command-line fuzzy finder written in Go
 brew "fzf"
-# GitHub command-line tool
-brew "gh"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
-# Smarter Dockerfile linter to validate best practices
-brew "hadolint"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
 # Tools and libraries to manipulate images in many formats
@@ -47,8 +43,6 @@ brew "jq"
 brew "k6"
 # Network authentication protocol
 brew "krb5"
-# Simple terminal UI for git commands
-brew "lazygit"
 # Asynchronous event library
 brew "libevent"
 # General-purpose lossless data-compression library
@@ -57,8 +51,6 @@ brew "zlib"
 brew "ncurses"
 # Fast, highly customisable system info script
 brew "neofetch"
-# Ambitious Vim-fork focused on extensibility and agility
-brew "neovim"
 # Platform built on V8 to build network applications
 brew "node"
 # Node.js version manager
@@ -67,23 +59,11 @@ brew "nodebrew"
 brew "openldap"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
-# Object-relational database system
-brew "ripgrep"
-# Wrapper around ripgrep that adds multiple rich file types
-brew "ripgrep-all"
 # Terminal multiplexer with VT100/ANSI terminal emulation
 brew "screen"
-# Vi 'workalike' with many additional features
-brew "vim"
 # Terraform
 brew "hashicorp/tap/terraform"
 # Virtual Audio Driver
 cask "blackhole-2ch"
 # Virtual monitor for screen sharing
 cask "deskpad"
-# Terminal emulator that uses platform-native UI and GPU acceleration
-cask "ghostty"
-# Set of tools to manage resources and applications hosted on Google Cloud
-cask "google-cloud-sdk"
-# Desktop automation application
-cask "hammerspoon"
