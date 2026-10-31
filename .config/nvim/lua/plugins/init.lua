@@ -48,17 +48,6 @@ return {
       ft = "lua",
       opts = {},
    },
-   {
-      "ravitemer/mcphub.nvim",
-      event = "VimEnter",
-      dependencies = {
-         "nvim-lua/plenary.nvim",
-      },
-      build = "npm install -g mcp-hub@latest", -- Installs `mcp-hub` node binary globally
-      config = function()
-         require("mcphub").setup()
-      end
-   },
    -- ==============LSP==============
    {
       "nvimtools/none-ls.nvim",
